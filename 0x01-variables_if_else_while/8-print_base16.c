@@ -1,26 +1,24 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Entry Point, Numbers base 16
  *
- *Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i = 'a';
-	int j = 'A';
+	int i='0';
+	int j='a';
 
-	while (i <= 'z')
+	while (i <= '9')
 	{
 		putchar(i);
 		i++;
 	}
-
-	while (j <= 'Z')
+	while (j <= 'f')
 	{
 		putchar(j);
 		j++;
 	}
-
 	putchar('\n');
 
 	return (0);
