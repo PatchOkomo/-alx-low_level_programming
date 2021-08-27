@@ -6,16 +6,16 @@
  */
 int main(void)
 {
-	int i;/*Tens for first combo*/
-	int j;/*Ones for first combo*/
-	int m;/*Tens for second combo*/
-	int n;/*Ones for second combo*/
+	int i;
+	int j;
+	int m;
+	int n;
 
 	for (i = '0'; i <= '9'; i++) /*print first two digit combo*/
 	{
 		for (j = '0'; j <= '9'; j++)
 		{
-		 	for (m = i; m <= '9'; m++) /*print second of pair*/
+			for (m = i; m <= '9'; m++) /*print second digit combo*/
 			{
 				for (n = j + 1; n <= '9'; n++)
 				{
