@@ -32,4 +32,9 @@ int _islower(int c);
  * _isalpha(int c) checks whether a character is alphabetic
  */
 int _isalpha(int c);
+
+/**
+ * int print_sign(int n) prints the sign of a number
+ */
+int print_sign(int n);
 #endif
