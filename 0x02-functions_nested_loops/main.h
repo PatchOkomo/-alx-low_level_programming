@@ -12,6 +12,7 @@ int _putchar(char c);
 
 /**
  * print_alphabet Prints the lowercase alphabet
+ * @c: The Character to print
  */
 void print_alphabet(void);
 
@@ -19,4 +20,16 @@ void print_alphabet(void);
  * void print_alphabet_x10(void) prints the alphabet 10 times
  */
 void print_alphabet_x10(void);
+
+/**
+ * _islower(int c); checks if a character is lowercase
+ * @c: The character to check
+ * Return: 1 if c is lowercase 0 otherwise
+*/
+int _islower(int c);
+
+/**
+ * _isalpha(int c) checks whether a character is alphabetic
+ */
+int _isalpha(int c);
 #endif
