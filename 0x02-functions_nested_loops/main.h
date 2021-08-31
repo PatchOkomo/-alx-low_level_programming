@@ -52,4 +52,9 @@ int print_last_digit(int);
  * jack_bauer(void) prints every minute of Jack Bauer's day
  */
 void jack_bauer(void);
+
+/**
+ * times_table - prints out the 9 times table
+ */
+void times_table(void);
 #endif
