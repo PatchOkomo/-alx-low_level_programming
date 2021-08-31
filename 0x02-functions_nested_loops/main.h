@@ -10,4 +10,11 @@
  */
 int _putchar(char c);
 
+/**
+ * print_alphabet Prints the lowercase alphabet
+ *
+ * Return: Always 0 on success
+ */
+void print_alphabet(void);
+
 #endif
