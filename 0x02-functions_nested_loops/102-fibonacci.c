@@ -14,12 +14,24 @@ int main(void)
 
 	for (i = 1; i <= (j / 2); i++)
 	{
-		printf("%li, %li, ", x, y);
-		x += y;
-		y += x;
+		if (i < (j / 2))
+		{
+			printf("%li, %li, ", x, y);
+			x += y;
+			y += x;
+		}
+
+		else
+		{
+			printf("%li, %li", x, y);
+			x += y;
+                        y += x;
+		}
 	}
 	if (j % 2 == 1)
-		printf("%li, ", x);
+	{
+		printf("%li", x);
+	}
 
 	printf("\n");
 
