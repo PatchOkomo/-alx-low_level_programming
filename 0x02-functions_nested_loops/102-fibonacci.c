@@ -25,7 +25,7 @@ int main(void)
 		{
 			printf("%li, %li", x, y);
 			x += y;
-                        y += x;
+			y += x;
 		}
 	}
 	if (j % 2 == 1)
