@@ -1,0 +1,2 @@
+-Welcome to Debugging
+-Rubber duck debugging (Explain it to an inanimate object) 
