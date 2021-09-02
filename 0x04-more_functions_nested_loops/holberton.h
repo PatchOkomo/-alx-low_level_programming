@@ -1,5 +1,5 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
 /**
  * _putchar - puts character to standard output
  * @c: character to put to standard output
@@ -54,4 +54,4 @@ void print_square(int size);
  * print_triangle - prints a triangle with size *size*
  */
 void print_triangle(int size);
-#endif /* _MAIN_H_ */
+#endif /* _HOLBERTON_H_ */
