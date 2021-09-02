@@ -4,4 +4,9 @@
  *int _isupper(int c); checks whether a character is capitalized
  */
 int _isupper(int c);
+
+/**
+ *int _isdigit(int c); - checks for a digit
+ */
+int _isdigit(int c);
 #endif
