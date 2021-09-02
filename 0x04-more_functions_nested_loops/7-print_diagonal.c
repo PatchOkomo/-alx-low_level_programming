@@ -10,6 +10,7 @@ void print_diagonal(int n)
 {
 	int s;/*variable for the '/'*/
 	int i;/*Variable for the spaces before the '/'*/
+
 	if (n > 0)
 	{
 		for (s = 1; s <= n; s++)
