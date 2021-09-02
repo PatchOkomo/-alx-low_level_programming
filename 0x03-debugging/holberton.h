@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 #include <stdio.h>
 
@@ -16,10 +16,10 @@ int largest_number(int a, int b, int c);
 /**
  *int convert_day converts day of the month to day of the year
  */
-int convert_day(int month, int day);
+int convert_day(int month, int day, int year);
 
 /**
  *print_remaining_days prints rmeining days of the year
  */
 void print_remaining_days(int month, int day, int year);
-#endif /* MAIN_H */
+#endif /* HOLBERTON_H */
