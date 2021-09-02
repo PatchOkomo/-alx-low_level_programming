@@ -30,4 +30,9 @@ void print_numbers(void);
  * print_most_numbers - prints 0-9 skipping 2 and 4
  */
 void print_most_numbers(void);
+
+/**
+ * more_numbers prints rows of numbers
+ */
+void more_numbers(void);
 #endif
