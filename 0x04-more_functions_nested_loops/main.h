@@ -44,4 +44,9 @@ void print_line(int n);
  * print_diagonal - print \ ending with a new line
  */
 void print_diagonal(int n);
+
+/**
+ *print_square - prints '#' in square
+ */
+void print_square(int size);
 #endif
