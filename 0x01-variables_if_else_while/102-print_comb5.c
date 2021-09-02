@@ -9,7 +9,7 @@ int main(void)
 	int i;
 	int j;
 	int m;
-	int n;
+	int n = '0';
 
 	for (i = '0'; i <= '9'; i++) /*print first two digit combo*/
 	{
@@ -17,7 +17,7 @@ int main(void)
 		{
 			for (m = i; m <= '9'; m++) /*print second digit combo*/
 			{
-				for (n = j + 1; n <= '9'; n++)
+				do
 				{
 					putchar(i);
 					putchar(j);
@@ -31,7 +31,9 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
+					n++;
 				}
+				while ((n = j + 1));
 				n = '0';
 			}
 		}
