@@ -21,7 +21,7 @@ int main(void)
 		else if ((i % y) == 0)
 			printf("Buzz ");
 
-		else if ((i % (x * y)) == 0)
+		else if (((i % x) == 0) && ((i % y) == 0))
 			printf("FizzBuzz ");
 
 		else
