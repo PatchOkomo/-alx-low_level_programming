@@ -35,4 +35,8 @@ void print_most_numbers(void);
  * more_numbers prints rows of numbers
  */
 void more_numbers(void);
+/**
+ * print_line - prints _ ending with \n
+ */
+void print_line(int n);
 #endif
