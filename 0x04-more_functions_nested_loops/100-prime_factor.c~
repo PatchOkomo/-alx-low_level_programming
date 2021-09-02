@@ -1,0 +1,41 @@
+#include <stdio.h>
+/**
+ * main - finds and prints the largest prime factor of 612852475143
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	int i;
+	int j;
+	long int number = 612852475143;
+	int prime;
+	long int l_prime;
+
+	for (i = 2; i <= number; i++)
+	{
+		if ((number % i) == 0)
+		{
+			prime = 2;
+			for (j = 2; j <= i/2; j++)
+			{
+				if (i % j == 0)
+				{
+					prime = 0;
+					l_prime = i;
+					break;
+				}
+			}
+
+			if (prime == 1)
+			{
+				l_prime = i;
+			}
+		}
+	}
+
+	printf("%ld", l_prime);
+
+	return (0);
+}
