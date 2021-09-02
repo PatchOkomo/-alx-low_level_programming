@@ -25,4 +25,9 @@ int mul(int a, int b);
  *void print_numbers(void) - print numbers 0-9
  */
 void print_numbers(void);
+
+/**
+ * print_most_numbers - prints 0-9 skipping 2 and 4
+ */
+void print_most_numbers(void);
 #endif
