@@ -2,8 +2,7 @@
 
 /**
  * print_line - prints __ ending with a new line
- *
- * Return: none(void function)
+ * @n: parameter to be tested
  */
 
 void print_line(int n)
