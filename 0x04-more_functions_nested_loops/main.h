@@ -49,4 +49,9 @@ void print_diagonal(int n);
  *print_square - prints '#' in square
  */
 void print_square(int size);
+
+/**
+ * print_triangle - prints a triangle with size *size*
+ */
+void print_triangle(int size);
 #endif
