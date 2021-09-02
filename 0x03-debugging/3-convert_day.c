@@ -8,9 +8,9 @@
 * Return: day of year
 */
 
-int convert_day(int month, int day)
+int convert_day(int month, int day, int year)
 {
-	if ((year % 4 == 0 || year % 400 == 0) && !(year % 100 == 0))
+	if ((year % 4 == 0))
 	{
 		switch (month)
 		{
@@ -18,39 +18,38 @@ int convert_day(int month, int day)
 			day = 31 + day;
 			break;
 		case 3:
-			day = 59 + day;
-			break;
+			day = 60 + day;
+				break;
 		case 4:
-			day = 90 + day;
+			day = 91 + day;
 			break;
 		case 5:
-			day = 120 + day;
+			day = 121 + day;
 			break;
 		case 6:
-			day = 151 + day;
+			day = 152 + day;
 			break;
 		case 7:
-			day = 181 + day;
-			break;
+				day = 182 + day;
+				break;
 		case 8:
-			day = 212 + day;
+			day = 213 + day;
 			break;
 		case 9:
-			day = 243 + day;
+			day = 244 + day;
 			break;
 		case 10:
-			day = 273 + day;
+			day = 274 + day;
 			break;
 		case 11:
-			day = 304 + day;
+			day = 305 + day;
 			break;
 		case 12:
-			day = 334 + day;
+			day = 335 + day;
 			break;
 		default:
 			break;
 		}
-		return (day);
 	}
 
 	else
@@ -80,7 +79,7 @@ int convert_day(int month, int day)
 			break;
 		case 9:
 			day = 243 + day;
-		break;
+			break;
 		case 10:
 			day = 273 + day;
 			break;
@@ -93,6 +92,6 @@ int convert_day(int month, int day)
 		default:
 			break;
 		}
-		return (day);
 	}
+	return (day);
 }
