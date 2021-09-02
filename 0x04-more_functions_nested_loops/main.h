@@ -39,4 +39,9 @@ void more_numbers(void);
  * print_line - prints _ ending with \n
  */
 void print_line(int n);
+
+/**
+ * print_diagonal - print \ ending with a new line
+ */
+void print_diagonal(int n);
 #endif
