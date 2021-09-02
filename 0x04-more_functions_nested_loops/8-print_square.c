@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_square - prints '#' in square
  * @size: parameter for size
@@ -8,14 +7,14 @@
 
 void print_square(int size)
 {
-	int row;
-	int column;
+	int i;/*Row*/
+	int j;/*Column*/
 
 	if (size > 0)
 	{
-		for (row = 1; row <= size; row ++)
+		for (i = 1; i <= size; i++)
 		{
-			for (column = 1; column <= size; column++)
+			for (j = 1; j <= size; j++)
 			{
 				_putchar('#');
 			}
