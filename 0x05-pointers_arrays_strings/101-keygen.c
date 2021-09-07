@@ -6,12 +6,11 @@
 /**
  * gen_pwd - generates a random password for the program 101-crackme
  * @n: length of password to be generated
- * Return: 0
+ * Return: None(void function)
  */
 
-int main(void)
+void pwd_gen(int n)
 {
-	int n;
 	int i;
 
 	int randomizer = 0;
@@ -21,17 +20,12 @@ int main(void)
 	 * numbers will be different every time*/
 	srand((unsigned int)(time(NULL)));
 
-	char numbers[];
-	char letter[];
-	char LETTER[];
-	char symbols[];
-	char password[];
+	char numbers[] = "0123456789";
+	char letter[] = "abcdefghijklmnoqprstuvwxyz";
+	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUVWXYZ";
+	char symbols[] = "!@#$^&*?";
+	char password[n];
 
-	n = 12;
-	numbers[10] =  "0123456789";
-	letter[26] = "abcdefghijklmnoqprstuvwxyz";
-	LETTER[] = "ABCDEFGHIJKLMNOQPRSTUVWXYZ";
-	symbols[] = "!@#$^&*?";
 	randomizer = rand() % 4;
 
 	for (i = 0; i < n; i++)
@@ -61,5 +55,14 @@ int main(void)
 			printf("%c", password[i]);
 		}
 	}
-	return 0;
+}
+
+int main(void)
+{
+	int n = 12;
+
+	pwd_gen(n);
+	printf("\n");
+
+	return (0);
 }
