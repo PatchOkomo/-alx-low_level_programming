@@ -11,8 +11,8 @@
 
 int main(void)
 {
-	int n = 12;
-	int i = 0;
+	int n;
+	int i;
 
 	int randomizer = 0;
 
@@ -21,16 +21,17 @@ int main(void)
 	 * numbers will be different every time*/
 	srand((unsigned int)(time(NULL)));
 
-	char numbers[] = "0123456789";
+	char numbers[];
+	char letter[];
+	char LETTER[];
+	char symbols[];
+	char password[12];
 
-	char letter[] = "abcdefghijklmnoqprstuvwyzx";
-
-	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
-
-	char symbols[] = "!@#$^&*?";
-
-	char password[n];
-
+	n = 12;
+	numbers[] =  "0123456789";
+	letter[] = "abcdefghijklmnoqprstuvwyzx";
+	LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
+	symbols[] = "!@#$^&*?";
 	randomizer = rand() % 4;
 
 	for (i = 0; i < n; i++)
