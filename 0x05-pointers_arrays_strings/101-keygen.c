@@ -25,12 +25,12 @@ int main(void)
 	char letter[];
 	char LETTER[];
 	char symbols[];
-	char password[12];
+	char password[];
 
 	n = 12;
-	numbers[] =  "0123456789";
-	letter[] = "abcdefghijklmnoqprstuvwyzx";
-	LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
+	numbers[10] =  "0123456789";
+	letter[26] = "abcdefghijklmnoqprstuvwxyz";
+	LETTER[] = "ABCDEFGHIJKLMNOQPRSTUVWXYZ";
 	symbols[] = "!@#$^&*?";
 	randomizer = rand() % 4;
 
