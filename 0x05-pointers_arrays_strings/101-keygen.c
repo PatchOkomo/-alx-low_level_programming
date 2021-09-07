@@ -12,20 +12,17 @@
 void pwd_gen(int n)
 {
 	int i;
-
 	int randomizer = 0;
+	char numbers[] = "0123456789";
+        char letter[] = "abcdefghijklmnoqprstuvwxyz";
+        char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUVWXYZ";
+        char symbols[] = "!@#$^&*?";
+        char password[n];
 
 	/* Seed the random-number generator
 	 * with current time so that the
 	 * numbers will be different every time*/
 	srand((unsigned int)(time(NULL)));
-
-	char numbers[] = "0123456789";
-	char letter[] = "abcdefghijklmnoqprstuvwxyz";
-	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUVWXYZ";
-	char symbols[] = "!@#$^&*?";
-	char password[n];
-
 	randomizer = rand() % 4;
 
 	for (i = 0; i < n; i++)
