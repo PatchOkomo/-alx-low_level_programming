@@ -56,8 +56,9 @@ void pwd_gen(int n)
 
 int main(void)
 {
-	int n = 12;
+	int n;
 
+	n = (rand() % 10);
 	pwd_gen(n);
 	printf("\n");
 
