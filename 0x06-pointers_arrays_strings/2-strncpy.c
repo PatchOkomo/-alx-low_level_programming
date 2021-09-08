@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat - concatenates at most n bytes from str1 to str2
+ * _strncpy - concatenates at most n bytes from str1 to str2
  * @dest: String to be copied to
  * @src: String to copy
  * @n: number of bytes of src to copy
@@ -20,10 +20,10 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 
 	while (i < n)
-        {
+	{
 		*(dest + i) = '\0';/*Null pointer b4 nth byte to loop*/
 		i++;
-        }
-	
-        return (dest);
+	}
+
+	return (dest);
 }

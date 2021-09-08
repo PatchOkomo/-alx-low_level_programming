@@ -7,18 +7,18 @@
 
 char *rot13(char *c)
 {
-	int src[53] ={'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+	int src[53] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
 		      'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
 		      'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
 		      'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-		      'S', 'T', 'U', 'V','W', 'X', 'Y', 'Z'};
-	int rot[53] ={'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
+		      'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+	int rot[53] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
 		      'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
 		      'j', 'k', 'l', 'm', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
 		      'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E',
 		      'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'};
 	int i;/*loop through rot13 array(rot)*/
-        int j;/*For the loop through string*/
+	int j;/*For the loop through string*/
 
 	for (j = 0; c[j] != '\0'; j++)
 	{

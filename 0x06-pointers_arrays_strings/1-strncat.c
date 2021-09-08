@@ -14,7 +14,7 @@ char *_strncat(char *dest, char *src, int n)
 	int j;/*Source check*/
 
 	i = 0;
-	while (*(dest + i) != '\0' )/*Check for the null pointer (end of line)*/
+	while (*(dest + i) != '\0')/*Check for the null pointer (end of line)*/
 	{
 		i++;
 	}
@@ -22,12 +22,12 @@ char *_strncat(char *dest, char *src, int n)
 	j = 0;
 	while (*(src + j) != *(src + n))/*Is it the nth byte?*/
 	{
-		*(dest+i) = *(src+j);/*Append*/
+		*(dest + i) = *(src + j);/*Append*/
 		i++;
 		j++;
 	}
 
-	*(dest+i) = '\0';
+	*(dest + i) = '\0';
 
 	return (dest);
 }
