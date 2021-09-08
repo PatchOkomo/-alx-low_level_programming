@@ -1,66 +1,59 @@
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
 
 /**
- * gen_pwd - generates a random password for the program 101-crackme
+ * main - generates a random password for the program 101-crackme
  * @n: length of password to be generated
- * Return: None(void function)
+ * Return: Always 0(Success)
  */
-
-void pwd_gen(int n)
-{
-	int i;
-	int randomizer = 0;
-	char numbers[] = "0123456789";
-        char letter[] = "abcdefghijklmnoqprstuvwxyz";
-        char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUVWXYZ";
-        char symbols[] = "!@#$^&*?";
-        char password[n];
-
-	/* Seed the random-number generator
-	 * with current time so that the
-	 * numbers will be different every time*/
-	srand((unsigned int)(time(NULL)));
-	randomizer = rand() % 4;
-
-	for (i = 0; i < n; i++)
-	{
-		if (randomizer == 1)
-		{
-			password[i] = numbers[rand() % 10];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else if (randomizer == 2)
-		{
-			password[i] = symbols[rand() % 8];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else if (randomizer == 3)
-		{
-			password[i] = LETTER[rand() % 26];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else
-		{
-			password[i] = letter[rand() % 26];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-	}
-}
 
 int main(void)
 {
-	int n;
+	char password[84];/*Stores password*/
+	int index = 0;
+	int sum = 0;
+	int diff_half1;
+	int diff_half2;
 
-	n = (rand() % 10);
-	pwd_gen(n);
-	printf("\n");
+	srand(time(0));
+
+	while (sum < 2772)
+	{
+		password[index] = 33 + rand() % 94;
+		sum += password[index++];
+	}
+
+	password[index] = '\0';
+
+	if (sum != 2772)
+	{
+		diff_half1 = (sum - 2772) / 2;
+		diff_half2 = (sum - 2772) / 2;
+		if ((sum - 2772) % 2 != 0)
+			diff_half1++;
+
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half1))
+			{
+				password[index] -= diff_half1;
+				break;
+			}
+		}
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half2))
+			{
+				password[index] -= diff_half2;
+				break;
+			}
+		}
+	}
+
+	printf("%s", password);
 
 	return (0);
 }
