@@ -18,26 +18,17 @@ void print_buffer(char *b, int size)
 	{
 		printf("\n");
 	}
-
 	else
 	{
 		/* print size chars from b */
 		for (i = 0; i < size; ++i)
 		{
 			if (i % 10 == 0)
-			{
 				printf("%08x:", i);
-			}
-
 			if (i % 2)
-			{
-					printf("%02x%02x", b[i - 1], b[i]);
-			}
+				printf("%02x%02x", b[i - 1], b[i]);
 			else
-                        {
 				printf(" ");
-                        }
-
 			if (i % 10 == 9)
 			{
 				printf(" ");
@@ -52,7 +43,6 @@ void print_buffer(char *b, int size)
 				printf("\n");
 			}
 		}
-
 		printf("\n");
 	}
 }
