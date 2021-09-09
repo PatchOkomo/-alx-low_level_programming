@@ -19,7 +19,7 @@ void print_buffer(char *b, int size)
 		printf("\n");
 	}
 	/* print size chars from b */
-	for (i = 0; i <= size; ++i)
+	for (i = 0; i < size; i++)
 	{
 		/*Prints 1st hex byte*/
 		if (i % 10 == 0)
@@ -29,15 +29,18 @@ void print_buffer(char *b, int size)
 			printf("%02x%02x", b[i - 1], b[i]);
 		else
 			printf(" ");
+		/*print buffer content*/
 		if (i % 10 == 9)
 		{
 			printf(" ");
-			for (byte = (i - 9); byte <= i; ++byte)
+			byte = (i - 9);
+			while (byte <= i)
 			{
 				if (isprint(b[byte]))
 					printf("%c", b[byte]);
 				else
 					printf(".");
+				byte++;
 			}
 			printf("\n");
 		}
