@@ -18,31 +18,29 @@ void print_buffer(char *b, int size)
 	{
 		printf("\n");
 	}
-	else
+	/* print size chars from b */
+	for (i = 0; i <= size; ++i)
 	{
-		/* print size chars from b */
-		for (i = 0; i < size; ++i)
+		/*Prints 1st hex byte*/
+		if (i % 10 == 0)
+			printf("%08x:", i);
+		/*print hex content*/
+		if (i % 2)
+			printf("%02x%02x", b[i - 1], b[i]);
+		else
+			printf(" ");
+		if (i % 10 == 9)
 		{
-			if (i % 10 == 0)
-				printf("%08x:", i);
-			if (i % 2)
-				printf("%02x%02x", b[i - 1], b[i]);
-			else
-				printf(" ");
-			if (i % 10 == 9)
+			printf(" ");
+			for (byte = (i - 9); byte <= i; ++byte)
 			{
-				printf(" ");
-
-				for (byte = i - 9; byte <= i; ++byte)
-				{
-					if (isprint(b[byte]))
-						printf("%c", b[byte]);
-					else
-						printf(".");
-				}
-				printf("\n");
+				if (isprint(b[byte]))
+					printf("%c", b[byte]);
+				else
+					printf(".");
 			}
+			printf("\n");
 		}
-		printf("\n");
 	}
+	printf("\n");
 }
