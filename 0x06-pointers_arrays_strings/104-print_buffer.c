@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <ctype.h>
 
 /**
  * print_buffer - Prints a buffer 10 bytes at a time, starting with
@@ -11,36 +10,41 @@
  */
 void print_buffer(char *b, int size)
 {
-	int byte;/*Byte to be printed*/
-	int i;/*index bytes and limit to 10*/
+	int i;
+	int j;
+	int k;
 
-	if (size == 0)
+	if (size <= 0)
 	{
 		printf("\n");
 	}
-	/* print size chars from b */
-	for (i = 0; i < size; i++)
+	else
 	{
-		/*Prints 1st hex byte*/
-		if (i % 10 == 0)
-			printf("%08x:", i);
-		/*print hex content*/
-		if (i % 2)
-			printf("%02x%02x", b[i - 1], b[i]);
-		else
-			printf(" ");
-		/*print buffer content*/
-		if (i % 10 == 9)
+		/* print size chars from b */
+		for (i = 0; i < size; i++)
 		{
-			printf(" ");
-			byte = (i - 9);
-			while (byte <= i)
+			/*Prints 1st hex byte*/
+			printf("%.8x:", j);
+			/*print hex content*/
+			for (j = i; j < i + 10; j++)
 			{
-				if (isprint(b[byte]))
-					printf("%c", b[byte]);
+				if (j % 2 == 0)
+					printf(" ");
+				if (j < size)
+					printf("%.2x", *(b + j));
 				else
-					printf(".");
-				byte++;
+					printf("  ");
+			}
+			/*print buffer content*/
+			printf(" ");
+			for (k = i; k < i + 10; k++)
+			{
+				if (k >= size)
+					break;
+				if (*(b + k) < 32 || *(b + k) > 126)
+					printf("%c", '.');
+				else
+					printf("%c", *(b + k));
 			}
 			printf("\n");
 		}
