@@ -2,7 +2,7 @@
 #define NULL 0
 
 /**
- * _strbrk -locates the first occurrence in the string s of any of the bytes in
+ * _strpbrk -locates the first occurrence in the string s of any of the bytes in
  *  the string accept
  * @s: string to search
  * @accept: target matches
