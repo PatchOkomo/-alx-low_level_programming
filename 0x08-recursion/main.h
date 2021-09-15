@@ -19,4 +19,8 @@ int test_root(int n, int root);
 int is_prime_number(int n);
 
 int is_palindrome(char *s);
+
+int comp(char *head, char *tail);
+
+int wildcmp(char *s1, char *s2);
 #endif /*_MAIN_H_*/
