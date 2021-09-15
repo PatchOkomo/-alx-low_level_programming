@@ -1,0 +1,3 @@
+-Getting into recursion
+-This is the ability of a function to call itself
+-Always start with a base case to exit the recursion and avoid infinite looping
