@@ -33,7 +33,6 @@ int _strlen(char *s)
 }
 
 /**
- *
  * is_palindrome - Checks whether a string is a palindrome
  * @s: The string to be checked
  * Return: 1 if s is a string 0 if not
