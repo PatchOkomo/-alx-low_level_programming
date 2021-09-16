@@ -1,12 +1,5 @@
 #include "main.h"
 /**
- * _sqrt_recursion - computes natural squareroot of a number
- * @n: Number whose squareroot is to be calculated
- * Return: Squareroot of n
- */
-
-
-/**
  * test_root - find square root of n, starting from the smallest possible, 0
  * @n: number
  * @root: test this root
@@ -23,6 +16,12 @@ int test_root(int n, int root)
 
 	return (test_root(n, root + 1));
 }
+
+/**
+ * _sqrt_recursion - computes natural squareroot of a number
+ * @n: Number whose squareroot is to be calculated
+ * Return: Squareroot of n
+ */
 
 
 int _sqrt_recursion(int n)
