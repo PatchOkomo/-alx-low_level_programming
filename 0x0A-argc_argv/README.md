@@ -1,4 +1,0 @@
--argc and arg v introduction
-- arguments passed to main
-- argc counts number of arguments passed
-- argv is the argument vector
