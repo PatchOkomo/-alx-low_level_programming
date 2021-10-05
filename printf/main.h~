@@ -1,0 +1,21 @@
+#ifndef _MAIN_H_
+#define _MAIN_H_
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+/**
+ * struct opc - struct of data type opc.
+ * @array: Arguments for analyze and formatted
+ * @function_opc: Functions that print data edited
+ * @function_opc_diff: Function that found different print argument
+*/
+typedef struct opc
+{
+	char *array;
+	int (*function_opc)(va_list argv, char *s, int position);
+	int (*function_opc_diff)(char *s, int position);
+} input;
+
+int _printf(const char *format, ...);
+#endif
