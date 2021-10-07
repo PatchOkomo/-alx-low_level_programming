@@ -1,0 +1,3 @@
+-Singly linked list
+-Data structure
+- Implemented using structures in c
