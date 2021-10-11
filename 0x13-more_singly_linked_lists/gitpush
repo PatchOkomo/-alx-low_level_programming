@@ -1,6 +1,8 @@
 #!/bin/bash
-git add .
+echo "enter file name"
+read files
+git add "$files"
 echo "Enter commit message:"
 read commitMessage
-git commit -m "$commitMessage"
+git commit -m "$commitMessage for $files"
 git push -u origin master
