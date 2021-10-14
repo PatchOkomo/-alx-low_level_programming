@@ -28,7 +28,7 @@ unsigned int binary_to_uint(const char *b)
 
 		pow *= 2; /*update power of 2*/
 		len--;
- 	}
+	}
 
- 	return (sum);
- }
+	return (sum);
+}
