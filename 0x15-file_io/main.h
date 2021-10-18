@@ -1,6 +1,9 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
+/* _strlen */
+int _strlen(char *str);
+
 /* open */
 #include <sys/types.h>
 #include <sys/stat.h>
