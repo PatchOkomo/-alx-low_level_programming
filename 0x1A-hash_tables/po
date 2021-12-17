@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Enter file name"
+read file
+git add "$file"
+git commit -m "Initial commit for $file"
+git push -u origin master
